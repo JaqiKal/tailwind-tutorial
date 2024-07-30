@@ -1,6 +1,99 @@
+# Lesson01 - Intro - Bullseye
+
+```txt
+lesson01/
+│
+├── build/
+│ ├── css/
+│ │ └── style.css
+│ └── index.html
+├── src/
+│ └── input.css
+├── tailwind.config.js
+└── README
+```
+
+gitpod /workspace/tailwind-tutorial-L01 (main) $ python3 -m http.server
+--> Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/)
+Or use Live server.
+
+- Download and install Node.js:
+
+  - One needs the node packet manger to be able to compile Tailwind CSS code.
+  - Use LTS
+  - I use: `node -v` = v16.13.0
+
+- add extension:
+
+  - Tailwind CSS IntelliSense
+  - Live Server, If vscode go to LiveServer Settings>Extension Settings, search Full Reload and check.
+  - Inline fold => folds the classes, looks more organized.
+
+- In Terminal
+  - create Tailwind config file in root:
+    `npx tailwindcss init `
+  - in root create 'build' directory
+  - in 'build' directory create `index.html` file with outline (emmet)
+  - in root create 'src' directory
+  - Set up content in `tailwind.config.js`, to tell where the html is, so that it can get the classes we are using and include in the style file that w will create with tailwind.
+
+=> `content: ["./build/*.html"],`
+
+- create in src directory an input.css file and write
+
+  ```
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  /* Custom CSS */
+  ```
+
+- IDE file > preferences => CSS < Lint: Unknown At Rules = ignore
+
+- In Terminal, compile base style:
+
+  - `npx tailwindcss -i ./src/input.css -o ./build/css/style.css`
+
+- Add <link rel="stylesheet" href="css/style.css"> in `index.html`
+
+- compile the css: `npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch`
+
+- Go live and check the styling
+
+- Add the divs with classes
+
+- Lastly add the radial-blue custom class css in the `input.css` file
+
+---
+
+Tailwind CSS Full Course for Beginners | Complete All-in-One Tutorial | 3 Hours | Dave Gray
+https://www.youtube.com/watch?v=lCxcTsOHrjo&t=185s
+
+All Resources for this Tailwind CSS Course: https://github.com/gitdagray/tailwind...
+
+- 📚 Tutorial References:
+
+  - 🔗 Tailwind CSS: https://tailwindcss.com/
+  - 🔗 Prettier: https://www.npmjs.com/package/prettier
+  - 🔗 Automatic Class Sorting with Prettier: https://tailwindcss.com/blog/automati...
+  - 🔗 git: https://git-scm.com/
+  - 🔗 Github: https://github.com/
+  - 🔗 Render: https://render.com/
+
+- ⚙ Web Dev Tools:
+  - 🔗 Chrome Browser: https://www.google.com/chrome/
+  - 🔗 Node.js: https://nodejs.org/
+  - 🔗 Visual Studio Code (VS Code): https://code.visualstudio.com/
+  - 🔗 Live Server VS Code Extension: https://marketplace.visualstudio.com/...
+  - 🔗 Tailwind CSS Intellisense VS Code Extension: https://marketplace.visualstudio.com/...
+  - 🔗 Inline Fold VS Code Extension: https://marketplace.visualstudio.com/...
+
+---
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome USER_NAME,
+Welcome Jacqueline Kalmár,
 
 This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
@@ -26,8 +119,8 @@ By Default, Gitpod gives you superuser security privileges. Therefore, you do no
 
 To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
+1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
+2. Scroll down to the _API Key_ and click _Reveal_
 3. Copy the key
 4. In Gitpod, from the terminal, run `heroku_config`
 5. Paste in your API key when asked
@@ -47,7 +140,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
   - replace all `<angle-bracket>` keys with your own data
 - enter password _(will not echo **\*\*\*\*** on screen)_
 
-------
+---
 
 ## Release History
 
@@ -91,7 +184,7 @@ We continually tweak and adjust this template to help give you the best experien
 
 **December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+---
 
 ## FAQ about the uptime script
 
